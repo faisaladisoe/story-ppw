@@ -1,0 +1,9 @@
+gunicorn
+django-heroku
+Flask
+Jinja2
+Werkzeug
+certifi
+chardet
+distribute
+requests
