@@ -20,7 +20,7 @@ install:
   - python setup.py -q install
 
 script:
-  - covarage run manage.py test
+  - coverage run manage.py test
 
 after_success:
   - codecov # submit coverage
