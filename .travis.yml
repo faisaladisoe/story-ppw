@@ -1,11 +1,56 @@
 language: python
+
 python:
   - "3.8"
+matrix:
+
+  include:
+    - stage: Lint and Code Style
+      python: 3.8
+      env: TOXENV=flake8
+    - python: 3.8
+      env: TOXENV=black
+    - python: 3.8
+      env: TOXENV=mypy
+    - python: 3.8
+      env: TOXENV=packaging
+
+    - stage: Tests (Python 3.8)
+      python: 3.8
+      env: TOXENV=coverage-py38-tw184,codecov
+    - python: 3.8
+      env: TOXENV=coverage-py38-tw192,codecov
+    - python: 3.8
+      env: TOXENV=coverage-py38-twcurrent,codecov
+
+    # Test against Twisted trunk in case something in development breaks us.
+    # This is allowed to fail below, since the bug may be in Twisted.
+    - python: 3.8
+      env: TOXENV=coverage-py38-twtrunk,codecov
+
+    - python: 3.8
+      env: TOXENV=docs
+    - python: 3.8
+      env: TOXENV=docs-linkcheck
+
+  allow_failures:
+    # Tests against Twisted trunk are allow to fail, as they are not supported.
+    - env: TOXENV=coverage-py38-twtrunk,codecov
+
+    # This depends on external web sites, so it's allowed to fail.
+    - env: TOXENV=docs-linkcheck
+
 env:
   - DJANGO_VERSION=3.1.1
+
 install:
+  - pip install tox
   - pip install -r requirements.txt
   - pip install -q Django==3.1.1
   - python setup.py -q install
+  
 script:
-  - pytest
+  - tox
+
+
+# adapted and inspired from https://github.com/twisted/klein/blob/master/.travis.yml
