@@ -1,15 +1,30 @@
+dist: xenial
+
 language: python
 
 python:
-  - "3.8"
+  - 3.8
+
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install -U pytest
+  - pip install codecov
 
 env:
   - DJANGO_VERSION=3.1.1
 
 install:
   - pip install -r requirements.txt
+  - pip install ".[test]" . # install package + test dependencies
   - pip install -q Django==3.1.1
   - python setup.py -q install
 
 script:
-  - make test
+  - pytest
+
+after_success:
+  - codecov # submit coverage
+
+
+# inspired from https://towardsdatascience.com/extensive-python-testing-on-travis-ci-4c24db9bf961
