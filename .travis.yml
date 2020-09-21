@@ -8,7 +8,6 @@ python:
 before_install:
   - python --version
   - pip install -U pip
-  - pip install -U pytest
   - pip install codecov
 
 env:
@@ -23,7 +22,14 @@ script:
   - coverage run manage.py test
 
 after_success:
-  - codecov # submit coverage
+  - codecov
 
+before_deploy: echo 'ready?'
 
-# inspired from https://towardsdatascience.com/extensive-python-testing-on-travis-ci-4c24db9bf961
+deploy:
+  provider: heroku
+  api_key:
+    secure: JdjhvZfm0G02T44TpowEogvXC4BBu7LF0Rjr2/SGfHdVVxuBE+wRhnVGVHsnT/cSLIzPF1nx8tUlfFm9BQv66VSNgaH8sMv/fr661fK78uFZKVNJDKbwsGVx0qywIYJtEG81fpyAY6CtyzvaWlOCRZx6Ptr5FDxaQnV5QPhydWjlIQ13KL/RwSEKHpH0+lGo47zeWJOI4uqxA6+cex9nGfENhqFrOuNf13bcWL4ppi0DuNcmqnz/rnrF9whMkPLzBe4L1O1xX3O5xAnt9UmFXS6ig2KQIfi6xvvCquPRjiU0UxzFWWz9LUYYaFTWPXisvoJcJBpaC44lmIq3nfsMyWb/xCaDlpYLp0c9KHBQLp12MBazoB7BGYhg2XgPDJE9shSXXRDbgg3r/9Os2z885OGLELBxOZIypHwhL9UTsLhIQdusApx0N8vXlLbWOXoZ+Yr17zKE8NKEctQlDC9/XbMb1FHv348n3hFh3fQ+lA7UJQywunXnA2ewHCbW8ScvQXNTwwPzmpBsnI+4pwzb75CpXwWI/Hpkfrb1YI5vVn4+MovPybX4E1I5xgVRvVtCgYveBkjc+HsHSc4XrPkq33vE3Si2ViNMNK6PPQICbKkomWCcV4mCgGluKdReTwN6kHw8GtqKCWYJtP8qWs2IG/Z4HoejZ7XryFchRzWv7EA=
+  app: faisal-ppw
+  on:
+    repo: faisaladisoe/story-ppw
