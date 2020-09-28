@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    background-color: #ffc7c7;
+    height: 100vh;
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+.img-container {
+    padding: 1.5rem 0 0;
+}
+
+#faisal-img {
+    height: 10rem;
+    width: 10rem;
+}
+
+.main-bio h1 {
+    font-family: 'Sacramento', cursive;
+    color: #0c056d;
+    font-size: 3.75rem;
+    padding: 1rem 0 0;
+}
+
+.main-bio h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #d72323;
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+}
+
+.socmed img {
+    display: inline;
+    margin: 2rem 1rem 0;
+    height: 2.25rem;
+    width: 2.25rem;
+}
+
+.description-container {
+    background-color: #e8f1f5;
+}
+
+#aboutMe {
+    text-align: center;
+    padding-top: 5rem;
+    color: #1f4068;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 0.05rem;
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+#hi {
+    font-family: 'Bitter', serif;   
+    font-size: 2.75rem;
+    color: #c06c84;
+}
+
+.brief-desc {
+    margin: auto;
+    padding: 2rem 0 3rem;
+    width: 75%;
+}
+
+.brief-desc p {
+    font-family: 'Lato', sans-serif;
+    color: #625772;
+    line-height: 5rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+#separator {
+    margin: 4rem;
+    width: 3rem;
+    margin: auto;
+    border-bottom: 0.7rem dotted #99e1e5;
+}
+
+#education {
+    text-align: center;
+    padding: 5rem 0 3rem;
+    color: #1e56a0;
+    font-family: 'Courgette', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.center {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.school {
+    height: 7rem;
+    width: 7rem;
+}
+
+.school-description {
+    padding: 1rem 0;
+}
+
+.school-description h1 {
+    line-height: 5rem;
+    color: #163172;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+
+.school-description h2 {
+    color: #769fcd;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+    font-size: 1.25rem;
+}
+
+.footer-desc {
+    background-color: #c5e3f6;
+    color: #142850;
+}
+
+.footer-desc p {
+    padding: 1rem 0;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 0.09rem;
+    font-size: 1rem;
+}
