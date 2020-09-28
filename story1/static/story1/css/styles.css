@@ -208,7 +208,6 @@
 }
 
 #scroll-up__button {
-    background-image: url('../images/up-arrow.svg');
     display: inline-block;
     width: 50px;
     height: 50px;
