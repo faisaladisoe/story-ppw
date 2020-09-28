@@ -5,7 +5,7 @@
 }
 
 .main-container {
-    background-color: #ffc7c7;
+    background-color: #ffcad4;
     height: 100vh;
     padding-top: 2.5rem;
     text-align: center;
@@ -24,12 +24,12 @@
     font-family: 'Sacramento', cursive;
     color: #0c056d;
     font-size: 3.75rem;
-    padding: 1rem 0 0;
+    padding-top: 2rem;
 }
 
 .main-bio h2 {
     font-family: 'Poppins', sans-serif;
-    color: #d72323;
+    color: #6a040f;
     font-size: 0.75rem;
     letter-spacing: 0.2rem;
 }
@@ -37,39 +37,47 @@
 .socmed img {
     display: inline;
     margin: 2rem 1rem 0;
-    height: 2.25rem;
-    width: 2.25rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    transition: 0.75s;
+    border-radius: 20%;
 }
 
-.description-container {
-    background-color: #e8f1f5;
+.socmed img:hover {
+    border-radius: 20%;
+    background-color: #d8e2dc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.aboutme-container {
+    background-color: #CCC7E9;
 }
 
 #aboutMe {
     text-align: center;
     padding-top: 5rem;
-    color: #1f4068;
-    font-family: 'Pacifico', cursive;
+    color: #625772;
+    font-family: 'Bitter', serif;
     letter-spacing: 0.05rem;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 2.5rem;
 }
 
 #hi {
     font-family: 'Bitter', serif;   
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     color: #c06c84;
 }
 
 .brief-desc {
     margin: auto;
     padding: 2rem 0 3rem;
-    width: 75%;
+    width: 70%;
 }
 
 .brief-desc p {
-    font-family: 'Lato', sans-serif;
-    color: #625772;
+    font-family: 'Poppins', sans-serif;
+    color: #071C52;
     line-height: 5rem;
     letter-spacing: 0.1rem;
     text-align: center;
@@ -82,23 +90,70 @@
     border-bottom: 0.7rem dotted #99e1e5;
 }
 
-#education {
-    text-align: center;
-    padding: 5rem 0 3rem;
-    color: #1e56a0;
-    font-family: 'Courgette', cursive;
-    font-size: 3rem;
-    font-weight: 400;
+.skills-container {
+    background-color: #F27272;
 }
 
-.center {
+#skills {
+    text-align: center;
+    padding: 4rem 0 3rem;
+    color: #fff;
+    font-family: 'Bitter', serif;
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+    font-size: 2.625rem;
+}
+
+.skill-content {
+    padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+}
+
+.content-section {
+    padding: 1.5rem 0 0.5rem;
+    text-align: center;
+}
+
+.content-header {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-family: 'Bitter', serif;
+}
+
+.education-container {
+    background-color: #CCC7E9;
+    padding: 5rem 0 7rem;
+}
+
+#education {
+    text-align: center;
+    padding-bottom: 4rem;
+    color: #1e56a0;
+    font-family: 'Bitter', serif;
+    font-size: 2.625rem;
+    font-weight: 400;
+    letter-spacing: 0.075rem;
+}
+
+.center-modified {
     text-align: center;
     padding: 2rem 0;
+    border-radius: 5%;
+    text-decoration: none;
+    transition: 0.75s;
+}
+
+.center-modified:hover {
+    background-color: #e3fdfd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 .school {
-    height: 7rem;
-    width: 7rem;
+    height: 6.5rem;
+    width: 6.5rem;
 }
 
 .school-description {
@@ -110,14 +165,29 @@
     color: #163172;
     font-family: 'Karla', sans-serif;
     font-weight: 400;
+    font-size: 1.75rem;
 }
 
 .school-description h2 {
-    color: #769fcd;
+    color: #0077b6;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     letter-spacing: 0.15rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+}
+
+.quote__main-container {
+    padding: 10rem 0;
+    background-color: #112d4e;
+    color: #f9f7f7;
+    font-size: 3rem;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+.quote-placeholder {
+    width: 75%;
+    margin: auto;
 }
 
 .footer-desc {
@@ -125,9 +195,59 @@
     color: #142850;
 }
 
+.center {
+    text-align: center;
+    padding: 2rem 0;
+}
+
 .footer-desc p {
     padding: 1rem 0;
     font-family: 'Karla', sans-serif;
     letter-spacing: 0.09rem;
     font-size: 1rem;
+}
+
+#scroll-up__button {
+    background-image: url('./images/up-arrow.svg');
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .5s, 
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#scroll-up__button::after {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#scroll-up__button:hover {
+    cursor: pointer;
+    background-color: #ff9f1c;
+}
+
+#scroll-up__button:active {
+    background-color: #e2afff;
+}
+
+#scroll-up__button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 500px) {
+    #button {
+      margin: 30px;
+    }
 }
