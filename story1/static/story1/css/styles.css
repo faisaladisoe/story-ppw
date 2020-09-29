@@ -213,15 +213,16 @@
 
 #special-back {
     padding: 5rem 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #625772;
     font-weight: 600;
     letter-spacing: 0.02rem;
+    text-align: center;
 }
 
 #back-icon {
-    height: 1rem;
-    width: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
     transform: rotate(180deg);
 }
 
