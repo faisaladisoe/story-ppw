@@ -34,7 +34,7 @@
     letter-spacing: 0.2rem;
 }
 
-.socmed img {
+.socmed-icon {
     display: inline;
     margin: 2rem 1rem 0;
     height: 2.5rem;
@@ -43,7 +43,7 @@
     border-radius: 20%;
 }
 
-.socmed img:hover {
+.socmed-icon:hover {
     border-radius: 20%;
     background-color: #d8e2dc;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
@@ -249,5 +249,54 @@
 @media (min-width: 500px) {
     #button {
       margin: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-container {
+        padding-top: 17vh;
+    }
+
+    .socmed-icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        margin: 2rem 0.85rem 0;
+    }
+
+    .main-bio h1 {
+        font-size: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    .brief-desc p {
+        line-height: 3rem;
+        text-align: justify;
+    }
+
+    .quote__main-container {
+        padding: 5rem 0;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 990px) and (orientation: landscape) {
+    .main-container {
+        height: 125vh;
+        padding-top: 3.5%;
+    }
+
+    .brief-desc p {
+        line-height: 3.25rem;
+    }
+
+    .quote__main-container {
+        padding: 5rem 0;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    .main-container {
+        padding-top: 30%;
     }
 }
