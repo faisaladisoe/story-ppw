@@ -361,9 +361,3 @@
         padding: 1rem 0 0;
     }
 }
-
-@media only screen and (min-width: 768px) and (max-width: 990px) {
-    .main-container {
-        padding-top: 30%;
-    }
-}
