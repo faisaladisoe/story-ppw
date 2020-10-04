@@ -1,19 +1,10 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Bitter&family=Courgette&family=Karla&family=Poppins&family=Sacramento&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'story1/css/styles.css' %}">
-    <link rel="shortcut icon" href="{% static 'story1/images/f-thing.svg' %}" type="image/x-icon">
-    <title>Personal Page</title>
-</head>
+{% include '../header.html' %}
+
+{% block title %}
+<title>Personal Page</title>
+{% endblock title %}
 
 <body>
     <a id="scroll-up__button" style="background-image: url('{% static 'story1/images/up-arrow.svg' %}');"></a>
@@ -26,16 +17,16 @@
             <h2>Muhammad Faisal Adi Soesatyo</h2>
         </div>
         <div class="socmed">
-            <a href="https://www.instagram.com/faisaladisoe/?hl=id" target="_blank" rel="noopener noreferrer"><img
-                    class="socmed-icon" src="{% static 'story1//images/instagram.svg' %}" alt="instagram" /></a>
-            <a href="https://twitter.com/__patagonia_" target="_blank" rel="noopener noreferrer"><img
-                    class="socmed-icon" src="{% static 'story1//images/twitter.svg' %}" alt="twitter" /></a>
-            <a href="https://github.com/faisaladisoe" target="_blank" rel="noopener noreferrer"><img
-                    class="socmed-icon" src="{% static 'story1/images/github.svg' %}" alt="github" /></a>
-            <a href="mailto:faisaladi27@gmail.com" target="_blank" rel="noopener noreferrer"><img
-                    class="socmed-icon" src="{% static 'story1/images/gmail.svg' %}" alt="gmail" /></a>
-            <a href="https://www.linkedin.com/in/m-faisal-adi-soesatyo-2b27611b6/" target="_blank"
-                rel="noopener noreferrer"><img class="socmed-icon" src="{% static 'story1/images/linkedin.svg' %}" alt="linkedin" /></a>
+            <a href="{{ socmed.0.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
+                    src="{% static 'story1/images/instagram.svg' %}" alt="{{ socmed.0.alternate }}" /></a>
+            <a href="{{ socmed.1.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
+                    src="{% static 'story1/images/twitter.svg' %}" alt="{{ socmed.1.alternate }}" /></a>
+            <a href="{{ socmed.2.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
+                    src="{% static 'story1/images/github.svg' %}" alt="{{ socmed.2.alternate }}" /></a>
+            <a href="{{ socmed.3.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
+                    src="{% static 'story1/images/gmail.svg' %}" alt="{{ socmed.3.alternate }}" /></a>
+            <a href="{{ socmed.4.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
+                    src="{% static 'story1/images/linkedin.svg' %}" alt="{{ socmed.4.alternate }}" /></a>
         </div>
     </div>
     <div class="aboutme-container">
@@ -227,22 +218,14 @@
     </div>
     <footer>
         <div class="footer-desc center">
-            <p id="special-next">icon copyright <a href="{% url 'copyright' %}"><img id="next-icon" src="{% static 'story1/images/next.svg' %}" alt="next-icon"></a></p>
+            <p id="special-next">icon copyright <a href="{% url 'copyright' %}"><img id="next-icon"
+                        src="{% static 'story1/images/next.svg' %}" alt="next-icon"></a></p>
             <p>Handcrafted with &#10084;&#65039;</p>
             <p>Copyright © 2020 Muhammad Faisal Adi Soesatyo. All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-    <script src="{% static 'story1/js/index.js' %}" type="text/javascript"></script>
+
+    {% include '../script.html' %}
 </body>
 
 </html>

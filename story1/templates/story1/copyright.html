@@ -1,83 +1,84 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% include '../header.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="shortcut icon" href="{% static 'story1/images/f-thing.svg' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'story1/css/styles.css' %}">
-    <title>Copyright</title>
-</head>
+{% block title %}
+<title>Copyright</title>
+{% endblock title %}
 
 <body>
     <div class="special-copyright">
         <h1 id='copyright-h1'>all icons in this website downloaded from :</h1>
         <div class="container copyright-space">
             <div class="row">
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="https://www.flaticon.com/authors/freepik"
-                        title="Freepik" target="_blank" rel="noopener noreferrer"><img class="socmed-icon special-case"
-                            src="{% static 'story1/images/f-thing.svg' %}" alt="f-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="https://www.flaticon.com/authors/freepik"
-                        title="Freepik" target="_blank" rel="noopener noreferrer"><img class="socmed-icon special-case"
-                            src="{% static 'story1//images/instagram.svg' %}" alt="instagram-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="https://www.flaticon.com/authors/freepik"
-                        title="Freepik" target="_blank" rel="noopener noreferrer"><img class="socmed-icon special-case"
-                            src="{% static 'story1//images/twitter.svg' %}" alt="twitter-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="https://www.flaticon.com/authors/freepik"
-                        title="Freepik" target="_blank" rel="noopener noreferrer"><img class="socmed-icon special-case"
-                            src="{% static 'story1/images/linkedin.svg' %}" alt="linkedin-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/github.svg' %}"
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.0.link }}"
+                        title="{{ copyright.0.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/f-thing.svg' %}"
+                            alt="f-logo"></a></div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.0.link }}"
+                        title="{{ copyright.0.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1//images/instagram.svg' %}"
+                            alt="instagram-logo"></a></div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.0.link }}"
+                        title="{{ copyright.0.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1//images/twitter.svg' %}"
+                            alt="twitter-logo"></a></div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.0.link }}"
+                        title="{{ copyright.0.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/linkedin.svg' %}"
+                            alt="linkedin-logo"></a></div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.1.link }}"
+                        title="{{ copyright.1.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/github.svg' %}"
                             alt="github-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/gmail.svg' %}"
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.1.link }}"
+                        title="{{ copyright.1.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/gmail.svg' %}"
                             alt="gmail-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/e-school.svg' %}"
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.2.link }}"
+                        title="{{ copyright.2.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/e-school.svg' %}"
                             alt="elementary-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/j-school.svg' %}"
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.3.link }}"
+                        title="{{ copyright.3.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/j-school.svg' %}"
                             alt="junior high-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/free-icon/school_3232526" title="xnimrodx" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/s-school.svg' %}"
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.4.link }}"
+                        title="{{ copyright.4.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/s-school.svg' %}"
                             alt="senior high-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/uni.svg' %}"
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.5.link }}"
+                        title="{{ copyright.5.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/uni.svg' %}"
                             alt="university-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/up-arrow.svg' %}"
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.1.link }}"
+                        title="{{ copyright.1.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/up-arrow.svg' %}"
                             alt="up arrow-logo"></a></div>
-                <div class="col-md-2 col-sm-3 col-4 content-section"><a
-                        href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar" target="_blank"
-                        rel="noopener noreferrer"><img class="socmed-icon special-case" src="{% static 'story1/images/next.svg' %}"
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.6.link }}"
+                        title="{{ copyright.6.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/next.svg' %}"
                             alt="next-icon"></a>
                 </div>
             </div>
-            <p id="special-back"><a href="{% url 'index' %}"><img id="back-icon" src="{% static 'story1/images/next.svg' %}" alt="next-icon"></a>
+            <p id="special-back"><a href="{% url 'index' %}"><img id="back-icon"
+                        src="{% static 'story1/images/next.svg' %}" alt="next-icon"></a>
                 back</p>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+    {% include '../script.html' %}
 </body>
 
 </html>
