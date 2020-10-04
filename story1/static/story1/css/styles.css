@@ -177,7 +177,7 @@
 }
 
 .quote__main-container {
-    padding: 10rem 0;
+    padding: 12rem 0;
     background-color: #112d4e;
     color: #f9f7f7;
     font-size: 3rem;
@@ -190,21 +190,23 @@
     margin: auto;
 }
 
-.footer-desc {
-    background-color: #c5e3f6;
-    color: #142850;
-}
-
 .center {
     text-align: center;
     padding: 2rem 0;
 }
 
+.footer-desc {
+    background-color: #c5e3f6;
+    color: #142850;
+    text-align: center;
+    padding: 1rem 0;
+}
+
 .footer-desc p {
-    padding: 0.5rem 0;
+    padding: 0.325rem 0;
     font-family: 'Karla', sans-serif;
     letter-spacing: 0.09rem;
-    font-size: 1rem;
+    font-size: 0.925rem;
 }
 
 #special-next {
