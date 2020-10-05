@@ -45,3 +45,15 @@ function change() {
         elem.fadeIn();
     });
 }
+
+/**
+ * Smooth transition when scrolling
+ * adapted from https://stackoverflow.com/questions/49173297/bootstrap-4-smooth-scrolling-working-on-nav-link-but-not-on-other-anchor-eleme/49173734
+**/
+
+$('.nav-link, .navbar-brand, .new-button').click(function() {
+    const sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top
+    }, 1000);
+});
