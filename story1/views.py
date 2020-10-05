@@ -59,8 +59,22 @@ def copyright(request):
             {
                 'title' : 'Gregor Cresnar',
                 'link' : 'https://www.flaticon.com/authors/gregor-cresnar'
+            },
+            {
+                'title' : 'iconixar',
+                'link' : 'https://www.flaticon.com/authors/iconixar'
+            },
+            {
+                'title' : 'Eucalyp',
+                'link' : 'https://creativemarket.com/eucalyp'
             }
         ]
     }
 
     return render(request, 'story1/copyright.html', content)
+
+def intro(request):
+    return render(request, 'intro/intro.html')
+
+def prototype(request):
+    return render(request, 'prototype/prototype.html')

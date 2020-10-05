@@ -1,0 +1,50 @@
+{% load static %}
+
+{% include '../header.html' %}
+
+{% block bootstrap %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock bootstrap %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'story1/css/prototype.css' %}">
+{% endblock css %}
+
+{% block title %}
+<title>Prototype</title>
+{% endblock title %}
+
+<body>
+    <div class="container prototype-container">
+        <h1 id="high-fidelity">Prototype</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="https://wireframe.cc/U7NNUF" target="_blank" rel="noopener noreferrer">
+                    <div class="positioning">
+                        <img class="logo" src="{% static 'story1/images/wireframe-colored.svg' %}" alt="wireframe">
+                        <div class="description">
+                            <h1>WIREFRAME</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="https://www.figma.com/proto/etepGHdhPmuMMaIXnVSB5v/story-2?node-id=7%3A2&scaling=contain"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="positioning">
+                        <img class="logo" src="{% static 'story1/images/design-modern.svg' %}" alt="high fidelity">
+                        <div class="description">
+                            <h1>PROTOTYPE</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    {% include '../script.html' %}
+</body>
+
+</html>

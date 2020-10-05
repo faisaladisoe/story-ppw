@@ -2,6 +2,15 @@
 
 {% include '../header.html' %}
 
+{% block bootstrap %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock bootstrap %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'story1/css/styles.css' %}">
+{% endblock css %}
+
 {% block title %}
 <title>Copyright</title>
 {% endblock title %}
@@ -70,6 +79,30 @@
                         title="{{ copyright.6.title }}" target="_blank" rel="noopener noreferrer"><img
                             class="socmed-icon special-case" src="{% static 'story1/images/next.svg' %}"
                             alt="next-icon"></a>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.7.link }}"
+                        title="{{ copyright.7.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/diary-clear.svg' %}"
+                            alt="story-icon"></a>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.7.link }}"
+                        title="{{ copyright.7.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/diary-brown.svg' %}"
+                            alt="story-icon"></a>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.0.link }}"
+                        title="{{ copyright.0.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/wireframe-colored.svg' %}"
+                            alt="wireframe-icon"></a>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-4 content-section"><a href="{{ copyright.8.link }}"
+                        title="{{ copyright.8.title }}" target="_blank" rel="noopener noreferrer"><img
+                            class="socmed-icon special-case" src="{% static 'story1/images/design-modern.svg' %}"
+                            alt="prototype-icon"></a>
                 </div>
             </div>
             <p id="special-back"><a href="{% url 'index' %}"><img id="back-icon"

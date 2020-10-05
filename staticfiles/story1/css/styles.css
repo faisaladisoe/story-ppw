@@ -83,13 +83,6 @@
     text-align: center;
 }
 
-#separator {
-    margin: 4rem;
-    width: 3rem;
-    margin: auto;
-    border-bottom: 0.7rem dotted #99e1e5;
-}
-
 .skills-container {
     background-color: #F27272;
 }

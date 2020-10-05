@@ -2,6 +2,16 @@
 
 {% include '../header.html' %}
 
+{% block bootstrap %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock bootstrap %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'story1/css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'story1/css/extra.css' %}">
+{% endblock css %}
+
 {% block title %}
 <title>Personal Page</title>
 {% endblock title %}
@@ -140,7 +150,7 @@
         </div>
     </div>
     <div class="education-container">
-        <h1 id="education">education</h1>
+        <h1 id="education">educations</h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -178,6 +188,33 @@
                             <h2>University of Indonesia</h2>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects-container">
+        <h1 id="project">projects</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="{% url 'introduction' %}">
+                        <div class="center-modified">
+                            <img class="school" src="{% static 'story1/images/diary-clear.svg' %}" alt="story 1" />
+                            <div class="school-description">
+                                <h1>STORY 1</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="{% url 'prototype' %}">
+                        <div class="center-modified">
+                            <img class="school" src="{% static 'story1/images/diary-brown.svg' %}" alt="story 2" />
+                            <div class="school-description">
+                                <h1>STORY 2</h1>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
