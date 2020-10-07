@@ -9,7 +9,6 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'story1/css/styles.css' %}">
-<link rel="stylesheet" href="{% static 'story1/css/extra.css' %}">
 {% endblock css %}
 
 {% block title %}
@@ -18,21 +17,6 @@
 
 <body>
     <a id="scroll-up__button" style="background-image: url('{% static 'story1/images/up-arrow.svg' %}');"></a>
-    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #ffcad4;">
-        <a class="navbar-brand" href="">faisaladisoe</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-link mx-auto" href="#aboutMe">about</a>
-                <a class="nav-link mx-auto" href="#skills">skills</a>
-                <a class="nav-link mx-auto" href="#education">educations</a>
-                <a class="nav-link mx-auto" href="#project">projects</a>
-            </div>
-        </div>
-    </nav>
     <div class="main-container">
         <div class="img-container">
             <img id="faisal-img" src="{% static 'story1/images/faisal-cropped.png' %}" alt="faisal-img">
@@ -42,16 +26,17 @@
             <h2>Muhammad Faisal Adi Soesatyo</h2>
         </div>
         <div class="socmed">
-            <a href="{{ socmed.0.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
-                    src="{% static 'story1/images/instagram.svg' %}" alt="{{ socmed.0.alternate }}" /></a>
-            <a href="{{ socmed.1.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
-                    src="{% static 'story1/images/twitter.svg' %}" alt="{{ socmed.1.alternate }}" /></a>
-            <a href="{{ socmed.2.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
-                    src="{% static 'story1/images/github.svg' %}" alt="{{ socmed.2.alternate }}" /></a>
-            <a href="{{ socmed.3.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
-                    src="{% static 'story1/images/gmail.svg' %}" alt="{{ socmed.3.alternate }}" /></a>
-            <a href="{{ socmed.4.link }}" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
-                    src="{% static 'story1/images/linkedin.svg' %}" alt="{{ socmed.4.alternate }}" /></a>
+            <a href="https://www.instagram.com/faisaladisoe/?hl=id" target="_blank" rel="noopener noreferrer"><img
+                    class="socmed-icon" src="{% static 'story1/images/instagram.svg' %}" alt="instagram" /></a>
+            <a href="https://twitter.com/__patagonia_" target="_blank" rel="noopener noreferrer"><img
+                    class="socmed-icon" src="{% static 'story1/images/twitter.svg' %}" alt="twitter" /></a>
+            <a href="https://github.com/faisaladisoe" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
+                    src="{% static 'story1/images/github.svg' %}" alt="github" /></a>
+            <a href="mailto:faisaladi27@gmail.com" target="_blank" rel="noopener noreferrer"><img class="socmed-icon"
+                    src="{% static 'story1/images/gmail.svg' %}" alt="gmail" /></a>
+            <a href="https://www.linkedin.com/in/m-faisal-adi-soesatyo-2b27611b6/" target="_blank"
+                rel="noopener noreferrer"><img class="socmed-icon" src="{% static 'story1/images/linkedin.svg' %}"
+                    alt="linkedin" /></a>
         </div>
     </div>
     <div class="aboutme-container">
@@ -130,16 +115,16 @@
                         <div class="p-2 bd-highlight">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col" style="text-align: right;">React.js</div>
-                                    <div class="col" style="text-align: left;">⭐⭐⭐</div>
+                                    <div class="col" style="text-align: right;">Django</div>
+                                    <div class="col" style="text-align: left;">⭐⭐</div>
                                 </div>
                             </div>
                         </div>
                         <div class="p-2 bd-highlight">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col" style="text-align: right;">Django</div>
-                                    <div class="col" style="text-align: left;">⭐⭐</div>
+                                    <div class="col" style="text-align: right;">React.js</div>
+                                    <div class="col" style="text-align: left;">⭐⭐⭐</div>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +150,7 @@
         </div>
     </div>
     <div class="education-container">
-        <h1 id="education">educations</h1>
+        <h1 id="education">education</h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -207,43 +192,6 @@
             </div>
         </div>
     </div>
-    <div class="projects-container">
-        <h1 id="project">projects</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <a href="{% url 'introduction' %}">
-                        <div class="center-modified">
-                            <img class="school" src="{% static 'story1/images/diary-clear.svg' %}" alt="story 1" />
-                            <div class="school-description">
-                                <h1>STORY 1</h1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <a href="{% url 'prototype' %}">
-                        <div class="center-modified">
-                            <img class="school" src="{% static 'story1/images/diary-brown.svg' %}" alt="story 2" />
-                            <div class="school-description">
-                                <h1>STORY 2</h1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm col-md-4">
-                    <a href="{% url 'initialDesign' %}">
-                        <div class="center-modified">
-                            <img class="school" src="{% static 'story1/images/diary-clear.svg' %}" alt="story 3" />
-                            <div class="school-description">
-                                <h1>STORY 3</h1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="caption-carousel">
         <div id="quote-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -279,11 +227,11 @@
         </div>
     </div>
     <footer>
-        <div class="footer-desc">
-            <p id="special-next">icon copyright <a href="{% url 'copyright' %}"><img id="next-icon"
+        <div class="footer-desc center">
+            <p id="special-next">icon copyright <a href="{% url 'copyrightInit' %}"><img id="next-icon"
                         src="{% static 'story1/images/next.svg' %}" alt="next-icon"></a></p>
-            <p id="footer-handcraft">Handcrafted with &#10084;&#65039;</p>
-            <p id="footer-copyright">Copyright © 2020 Muhammad Faisal Adi Soesatyo. All rights reserved.</p>
+            <p>Handcrafted with &#10084;&#65039;</p>
+            <p>Copyright © 2020 Muhammad Faisal Adi Soesatyo. All rights reserved.</p>
         </div>
     </footer>
 

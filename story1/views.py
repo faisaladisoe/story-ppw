@@ -78,3 +78,9 @@ def intro(request):
 
 def prototype(request):
     return render(request, 'prototype/prototype.html')
+
+def initialDesign(request):
+    return render(request, 'initDesign/initDesign.html')
+
+def copyrightInit(request):
+    return render(request, 'initDesign/copyright-init.html')

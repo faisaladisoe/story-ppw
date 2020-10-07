@@ -6,5 +6,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('copyright/', views.copyright, name='copyright'),
     path('intro/', views.intro, name='introduction'),
-    path('prototype/', views.prototype, name='prototype')
+    path('prototype/', views.prototype, name='prototype'),
+    path('init-design/', views.initialDesign, name='initialDesign'),
+    path('copyright-init/', views.copyrightInit, name='copyrightInit')
 ]
