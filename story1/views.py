@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import CourseForm
+from .models import Course
 
 # Create your views here.
 def index(request):
@@ -77,10 +79,58 @@ def intro(request):
     return render(request, 'intro/intro.html')
 
 def prototype(request):
-    return render(request, 'prototype/prototype.html')
+    return render(request, 'story2/prototype.html')
 
 def initialDesign(request):
-    return render(request, 'initDesign/initDesign.html')
+    return render(request, 'story3/initDesign.html')
 
 def copyrightInit(request):
-    return render(request, 'initDesign/copyright-init.html')
+    return render(request, 'story3/copyright-init.html')
+
+def courseRegister(request):
+    form = CourseForm()
+    if request.method == 'POST':
+        form = CourseForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('courseList/')
+
+    content = {
+        'form' : form
+    }
+
+    return render(request, 'story5/courseRegister.html', content)
+
+def courseList(request):
+    data = Course.objects.all()
+    content = {
+        'data' : data
+    }
+
+    return render(request, 'story5/courseList.html', content)
+
+def courseUpdate(request, pk):
+    data = Course.objects.get(id=pk)
+    form = CourseForm(instance = data)
+    if request.method == 'POST':
+        form = CourseForm(request.POST, instance = data)
+        if form.is_valid():
+            form.save()
+            return redirect('../../courseList/')
+
+    content = {
+        'form' : form
+    }
+
+    return render(request, 'story5/courseUpdate.html', content)
+
+def courseDelete(request, pk):
+    data = Course.objects.get(id = pk)
+    if request.method == 'POST':
+        data.delete()
+        return redirect('../../courseList/')
+
+    content = {
+        'item' : data.course_name
+    }
+    return render(request, 'story5/courseDelete.html', content)

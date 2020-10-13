@@ -1,0 +1,29 @@
+{% load static %}
+
+{% include '../header.html' %}
+
+{% block bootstrap %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock bootstrap %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'story1/css/courseRegister.css' %}">
+{% endblock css %}
+
+{% block title %}
+<title>Courses List</title>
+{% endblock title %}
+
+<body>
+    <form action="" method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="{% url 'courseList' %}">Course List</a>
+</body>
+
+{% include '../script.html' %}
+</html>

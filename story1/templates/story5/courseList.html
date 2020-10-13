@@ -1,0 +1,55 @@
+{% load static %}
+
+{% include '../header.html' %}
+
+{% block bootstrap %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock bootstrap %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'story1/css/courseList.css' %}">
+{% endblock css %}
+
+{% block title %}
+<title>Courses List</title>
+{% endblock title %}
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Lecturer</th>
+                <th>Credit</th>
+                <th>Description</th>
+                <th>Term</th>
+                <th>Academic Year</th>
+                <th>Room</th>
+                <th>Date Registered</th>
+                <th>Update</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for component in data %}
+                <tr>
+                    <td>{{component.course_name}}</td>
+                    <td>{{component.lecturer}}</td>
+                    <td>{{component.credits}}</td>
+                    <td>{{component.description}}</td>
+                    <td>{{component.term}}</td>
+                    <td>{{component.academic_year}}</td>
+                    <td>{{component.room}}</td>
+                    <td>{{component.date_created}}</td>
+                    <td><a href="{% url 'courseUpdate' component.id %}">UPDATE</a></td>
+                    <td><a href="{% url 'courseDelete' component.id %}">DELETE</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'courseRegister' %}">Course Register</a>
+</body>
+
+{% include '../script.html' %}
+</html>
