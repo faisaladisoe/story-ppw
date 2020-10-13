@@ -18,6 +18,11 @@ install:
   - pip install -q Django==3.1.1
   - python setup.py -q install
 
+before_script:
+  - python manage.py collectstatic --no-input
+  - python manage.py makemigrations
+  - python manage.py migrate
+
 script:
   - coverage run manage.py test
 

@@ -275,6 +275,10 @@
     background-color: #ff9f1c;
 }
 
+#story4:hover {
+    cursor: pointer;
+}
+
 #scroll-up__button:active {
     background-color: #e2afff;
 }
