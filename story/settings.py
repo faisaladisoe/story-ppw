@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 PRODUCTION = os.getenv('DATABASE_URL') is not None
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = not PRODUCTION
+# DEBUG = not PRODUCTION
+DEBUG = True
 
 ALLOWED_HOSTS = ['faisal-ppw.herokuapp.com']
 
