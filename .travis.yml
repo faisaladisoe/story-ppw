@@ -33,3 +33,6 @@ deploy:
   app: faisal-ppw
   on:
     repo: faisaladisoe/story-ppw
+
+after_deploy:
+  ./deployement.sh
