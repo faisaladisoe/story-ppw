@@ -25,7 +25,7 @@ after_success:
   - codecov
 
 before_deploy: echo 'ready?'
-  
+
 deploy:
   provider: heroku
   api_key:
@@ -35,4 +35,4 @@ deploy:
     repo: faisaladisoe/story-ppw
 
 after_deploy:
-  ./deployement.sh
+  ./deployment.sh
