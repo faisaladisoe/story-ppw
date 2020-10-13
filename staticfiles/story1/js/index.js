@@ -57,3 +57,9 @@ $('.nav-link, .navbar-brand, .new-button').click(function() {
       scrollTop: $(sectionTo).offset().top
     }, 1000);
 });
+
+const story4 = $('#story4');
+story4.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+});
