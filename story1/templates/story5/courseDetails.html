@@ -1,0 +1,34 @@
+{% load static %}
+
+{% include '../header.html' %}
+
+{% block bootstrap %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock bootstrap %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'story1/css/courseDetails.css' %}">
+{% endblock css %}
+
+{% block title %}
+<title>Course Details</title>
+{% endblock title %}
+
+<body>
+    {% for component in data %}
+        <p>Nama matkulnya adalah {{ component.course_name }}</p>
+        <p>Dosen pada matkul ini Pak/Bu {{ component.lecturer }}</p>
+        <p>Matkul ini berbobot {{ component.credits }} SKS</p>
+        <p>Bagiku matkul ini {{ component.description }}</p>
+        <p>Matkul ini berada di semester {{ component.term }}</p>
+        <p>Juga di tahun ajaran {{ component.academic_year }}</p>
+        <p>Proses KBM matkul ini berada di ruangan {{ component.room }}</p>
+        <p>Didaftarkan pada {{ component.date_created }}</p>
+    {% endfor %}
+
+    <a href="{% url 'courseList' %}">Course List</a>
+</body>
+
+{% include '../script.html' %}
+</html>

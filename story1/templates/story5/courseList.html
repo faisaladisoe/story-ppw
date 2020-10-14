@@ -34,7 +34,7 @@
         <tbody>
             {% for component in data %}
                 <tr>
-                    <td>{{component.course_name}}</td>
+                    <td><a href="{% url 'courseDetails' component.course_name %}">{{component.course_name}}</a></td>
                     <td>{{component.lecturer}}</td>
                     <td>{{component.credits}}</td>
                     <td>{{component.description}}</td>

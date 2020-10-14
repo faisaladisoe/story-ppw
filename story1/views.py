@@ -109,8 +109,16 @@ def courseList(request):
 
     return render(request, 'story5/courseList.html', content)
 
+def courseDetails(request, course_name):
+    data = Course.objects.all().filter(course_name = course_name)
+    content = {
+        'data' : data
+    }
+
+    return render(request, 'story5/courseDetails.html', content)
+
 def courseUpdate(request, pk):
-    data = Course.objects.get(id=pk)
+    data = Course.objects.get(id = pk)
     form = CourseForm(instance = data)
     if request.method == 'POST':
         form = CourseForm(request.POST, instance = data)
