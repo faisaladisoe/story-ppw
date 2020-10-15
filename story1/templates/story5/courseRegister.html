@@ -18,12 +18,20 @@
 <body>
     <form action="" method="POST" autocomplete="off">
         {% csrf_token %}
-        {{form}}
-        <button type="submit">Submit</button>
+        {{ form }}
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-    <a href="{% url 'courseList' %}">Course List</a>
-    <a href="{% url 'index' %}">Back to Home</a>
+    
+    <button class="btn btn-danger">
+        <a href="{% url 'courseList' %}" style="text-decoration: none; color: white;">
+            Course List
+        </a>
+    </button>
+    <button class="btn btn-dark">
+        <a href="{% url 'index' %}" style="text-decoration: none; color: white;">
+            Back to Home
+        </a>
+    </button>
 </body>
 
 {% include '../script.html' %}

@@ -16,19 +16,46 @@
 {% endblock title %}
 
 <body>
-    {% for component in data %}
-        <h2>{{ component.course_name }}</h2>
-        <p>Dosen pada matkul ini Pak/Bu {{ component.lecturer }}</p>
-        <p>Matkul ini berbobot {{ component.credits }} SKS</p>
-        <p>Bagiku matkul ini {{ component.description }}</p>
-        <p>Matkul ini berada di semester {{ component.term }}</p>
-        <p>Juga di tahun ajaran {{ component.academic_year }}</p>
-        <p>Proses KBM matkul ini berada di ruangan {{ component.room }}</p>
-        <p>Didaftarkan pada {{ component.date_created }}</p>
-    {% endfor %}
+    <div class="container" style="text-align: center; padding-top: 2%;">
+        <table class="table table-hover table-dark">
+            <tbody>
+                {% for component in data %}
+                <tr>
+                    <td><h2>{{ component.course_name }}</h2></td>
+                </tr>
+                <tr>
+                    <td><p>Dosen pada matkul ini Pak/Bu {{ component.lecturer }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Matkul ini berbobot {{ component.credits }} SKS</p></td>
+                </tr>
+                <tr>
+                    <td><p>Bagiku matkul ini {{ component.description }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Matkul ini berada di semester {{ component.term }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Juga di tahun ajaran {{ component.academic_year }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Proses KBM matkul ini berada di ruangan {{ component.room }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Didaftarkan pada {{ component.date_created }}</p></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button class="btn btn-info">
+            <a href="{% url 'courseList' %}" style="text-decoration: none; color: white;">
+                Course List
+            </a>
+        </button>
+    </div>
 
-    <a href="{% url 'courseList' %}">Course List</a>
 </body>
 
 {% include '../script.html' %}
+
 </html>
