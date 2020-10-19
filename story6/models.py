@@ -12,7 +12,7 @@ class Event(models.Model):
 
 class Visitor(models.Model):
     visitor_name = models.CharField(max_length = 75, null = True)
-    visitor_age = models.PositiveIntegerField(validators=[MinValueValidator(17), MaxValueValidator(100)])
+    visitor_age = models.PositiveIntegerField(validators=[MinValueValidator(17), MaxValueValidator(100)], null = True)
     ID_TYPE = (
         ('KTM', 'KTM'),
         ('KTP', 'KTP'),
