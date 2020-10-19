@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator 
 
 # Create your models here.
 class Event(models.Model):
@@ -11,7 +12,7 @@ class Event(models.Model):
 
 class Visitor(models.Model):
     visitor_name = models.CharField(max_length = 75, null = True)
-    visitor_age = models.PositiveIntegerField(null = True)
+    visitor_age = models.PositiveIntegerField(validators=[MinValueValidator(17), MaxValueValidator(100)])
     ID_TYPE = (
         ('KTM', 'KTM'),
         ('KTP', 'KTP'),
