@@ -142,3 +142,59 @@ def courseDelete(request, pk):
         'item' : data.course_name
     }
     return render(request, 'story5/courseDelete.html', content)
+
+# def events(request):
+#     data = Event.objects.all()
+#     content = {
+#         'data' : data
+#     }
+#     return render(request, 'story6/events.html', content)
+
+# def eventDetails(request, pk):
+#     data = Event.objects.all().filter(event = pk)
+#     visitor = Visitor.objects.all().filter(event_id = data[0].id)
+#     content = {
+#         'data' : data,
+#         'visitor' : visitor
+#     }
+
+#     return render(request, 'story6/eventDetails.html', content)
+
+# def addEvents(request):
+#     form = EventForm()
+#     if request.method == 'POST':
+#         form = EventForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('../')
+
+#     content = {
+#         'form' : form
+#     }
+#     return render(request, 'story6/addEvents.html', content)
+
+# def deleteEvents(request, pk):
+#     data = Event.objects.get(id = pk)
+#     if request.method == 'POST':
+#         data.delete()
+#         return redirect('../../')
+
+#     content = {
+#         'item' : data.event
+#     }
+#     return render(request, 'story6/deleteEvents.html', content)
+
+# def registerVisitor(request, pk):
+#     form = VisitorForm()
+#     data = Event.objects.get(id = pk)
+#     if request.method == 'POST':
+#         form = VisitorForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('../../eventDetails/{}/'.format(data))
+
+#     content = {
+#         'form' : form,
+#         'data' : data,
+#     }
+#     return render(request, 'story6/registerVisitor.html', content)

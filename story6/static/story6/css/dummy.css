@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.card-container {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+#heading-text {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    color: burlywood;
+}
+
+.card {
+    margin: auto;
+}
+
+.st {
+    /* border: 1px solid black; */
+    margin-top: 3rem;
+}
+
+.form-title {
+    font-weight: bold;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.card-regis {
+    padding: 2.75% 2% 5%;
+}
+
+#event-logo {
+    height: 50px;
+    width: 50px;
+}
+
+.event-container {
+    margin: auto;
+    width: 80%;
+    height: 75%;
+    /* background-color: aqua; */
+}
+
+#event-title {
+    font-size: 2.5rem;
+}
+
+#event-bDescription {
+    font-size: 1.2rem;
+}
+
+.visitor-container {
+    padding-top: 3rem;
+}
+
+.card-visitor {
+    padding-top: 2rem;
+}
+
+.mod {
+    padding-top: 1rem;
+}

@@ -14,4 +14,9 @@ urlpatterns = [
     path('courseRegister/courseUpdate/<str:pk>/', views.courseUpdate, name = 'courseUpdate'),
     path('courseRegister/courseDelete/<str:pk>/', views.courseDelete, name = 'courseDelete'),
     path('courseRegister/courseList/<str:course_name>/', views.courseDetails, name = 'courseDetails'),
+    # path('events/', views.events, name = 'events'),
+    # path('events/addEvents/', views.addEvents, name = 'addEvents'),
+    # path('events/deleteEvents/<str:pk>/', views.deleteEvents, name = 'deleteEvents'),
+    # path('events/eventDetails/<str:pk>/', views.eventDetails, name = 'eventDetails'),
+    # path('events/registerVisitor/<str:pk>/', views.registerVisitor, name = 'registerVisitor'),
 ]
