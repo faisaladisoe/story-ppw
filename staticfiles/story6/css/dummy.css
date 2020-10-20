@@ -16,10 +16,6 @@
     color: burlywood;
 }
 
-.card {
-    margin: auto;
-}
-
 .st {
     margin-top: 3rem;
 }
@@ -48,15 +44,36 @@
 }
 
 #event-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    color: navy;
+    font-family: 'Poppins', sans-serif;
 }
 
 #event-bDescription {
     font-size: 1.2rem;
 }
 
+#event-cDescription {
+    text-align: justify;
+}
+
 .visitor-container {
     padding-top: 3rem;
+}
+
+#visitor-tagline {
+    font-size: 2.3rem;
+    color: navy;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    margin: auto auto 2rem;
+    border-color: navy;
+}
+
+.card-body {
+    border-radius: 100px;
 }
 
 .card-visitor {

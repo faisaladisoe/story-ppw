@@ -21,7 +21,7 @@
         <a href="{% url 'events' %}" class="btn btn-outline-primary">Event List</a>
         {% for item in data %}
         <a href="{% url 'deleteEvents' item.id %}" class="btn btn-outline-danger">Delete Events</a>
-        <div class="card-regis">
+        <div class="registration-form">
             <div class="container">
                 <div class="event-container">
                     <p id="event-title">{{ item.event }}</p>
@@ -31,7 +31,7 @@
             </div>
             {% endfor %}
             <div class="container visitor-container">
-                <h2>Our Visitors</h2>
+                <h2 id="visitor-tagline">Our Visitors</h2>
                 <div class="container card-visitor">
                     <div class="row">
                         {% for item in visitor %}
