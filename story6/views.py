@@ -12,11 +12,16 @@ def events(request):
 
 def eventDetails(request, pk):
     data = Event.objects.all().filter(event = pk)
-    visitor = Visitor.objects.all().filter(event_id = data[0].id)
-    content = {
-        'data' : data,
-        'visitor' : visitor
-    }
+    if data.exists():
+        visitor = Visitor.objects.all().filter(event_id = data[0].id)
+        content = {
+            'data' : data,
+            'visitor' : visitor
+        }
+    else:
+        content = {
+            'data' : data
+        }
 
     return render(request, 'story6/eventDetails.html', content)
 
