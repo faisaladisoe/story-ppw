@@ -57,6 +57,8 @@ def registerVisitor(request, pk):
         if form.is_valid():
             form.save()
             return redirect('../../eventDetails/{}/'.format(data))
+    else:
+        form = VisitorForm()
 
     content = {
         'form' : form,

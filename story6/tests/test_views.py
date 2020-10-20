@@ -2,6 +2,7 @@ from http import HTTPStatus
 from django.test import TestCase, Client
 from django.urls import resolve, reverse
 from story6.models import Event, Visitor
+from story6.forms import EventForm, VisitorForm
 
 # Create your tests here.
 class story6ViewsTest(TestCase):
@@ -76,7 +77,7 @@ class story6ViewsTest(TestCase):
         self.assertEqual(response.status_code, HTTPStatus.OK)
     
     def test_register_visitor_url_POST(self):
-        response = self.client.post(self.registerVisitor_url, {
+        response = self.client.post(self.registerVisitor_url, data = {
             'visitor_name' : 'Muhammad Faisal Adi Soesatyo',
             'visitor_age' : 19,
             'id_type' : 'SIM',
@@ -90,7 +91,7 @@ class story6ViewsTest(TestCase):
         self.assertEquals(response.status_code, HTTPStatus.OK)
     
     def test_update_visitor_url_POST(self):
-        response = self.client.post(self.updateVisitor_url, {
+        response = self.client.post(self.updateVisitor_url, data = {
             'visitor_name' : 'Muhammad Faisal Adi Soesatyo',
             'visitor_age' : 19,
             'id_type' : 'SIM',
