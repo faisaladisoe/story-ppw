@@ -71,7 +71,7 @@ class story6FormsTest(TestCase):
     def test_complete_description_max_length(self):
         event_component = EventForm()
         event_attribute = event_component.fields['complete_description'].max_length
-        self.assertEqual(event_attribute, 1000)
+        self.assertEqual(event_attribute, 2000)
     
     def test_complete_description_attribute_widget_id(self):
         event_component = EventForm()

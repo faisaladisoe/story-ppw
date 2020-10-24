@@ -35,7 +35,7 @@ class EventForm(ModelForm):
 
     complete_description = forms.CharField(
         required = True,
-        max_length = 1000,
+        max_length = 2000,
         widget = forms.Textarea(
             attrs = {
                 'id' : 'complete-description',
