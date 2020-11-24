@@ -1,45 +1,33 @@
 dist: xenial
-
 language: python
-
 python:
-  - 3.8
-
+- 3.8
 before_install:
-  - python --version
-  - pip install -U pip
-  - pip install codecov
-
+- python --version
+- pip install -U pip
+- pip install codecov
 env:
-  - DJANGO_VERSION=3.1.1
-
+- DJANGO_VERSION=3.1.1
 install:
-  - pip install -r requirements.txt
-  - pip install -q Django==3.1.1
-  - python setup.py -q install
-
+- pip install -r requirements.txt
+- pip install -q Django==3.1.1
+- python setup.py -q install
 before_script:
-  - python manage.py collectstatic --noinput
-  - python manage.py makemigrations
-  - python manage.py migrate
-
+- python manage.py collectstatic --noinput
+- python manage.py makemigrations
+- python manage.py migrate
 script:
-  - python manage.py test story6.tests
-  - coverage run --source='story6' manage.py test story6
-  - coverage report -m
-
+- python manage.py test story6.tests
+- coverage run --source='story6' manage.py test story6
+- coverage report -m
 after_success:
-  - codecov
-
+- codecov
 before_deploy: echo 'ready?'
-
 deploy:
   provider: heroku
   api_key:
-    secure: JdjhvZfm0G02T44TpowEogvXC4BBu7LF0Rjr2/SGfHdVVxuBE+wRhnVGVHsnT/cSLIzPF1nx8tUlfFm9BQv66VSNgaH8sMv/fr661fK78uFZKVNJDKbwsGVx0qywIYJtEG81fpyAY6CtyzvaWlOCRZx6Ptr5FDxaQnV5QPhydWjlIQ13KL/RwSEKHpH0+lGo47zeWJOI4uqxA6+cex9nGfENhqFrOuNf13bcWL4ppi0DuNcmqnz/rnrF9whMkPLzBe4L1O1xX3O5xAnt9UmFXS6ig2KQIfi6xvvCquPRjiU0UxzFWWz9LUYYaFTWPXisvoJcJBpaC44lmIq3nfsMyWb/xCaDlpYLp0c9KHBQLp12MBazoB7BGYhg2XgPDJE9shSXXRDbgg3r/9Os2z885OGLELBxOZIypHwhL9UTsLhIQdusApx0N8vXlLbWOXoZ+Yr17zKE8NKEctQlDC9/XbMb1FHv348n3hFh3fQ+lA7UJQywunXnA2ewHCbW8ScvQXNTwwPzmpBsnI+4pwzb75CpXwWI/Hpkfrb1YI5vVn4+MovPybX4E1I5xgVRvVtCgYveBkjc+HsHSc4XrPkq33vE3Si2ViNMNK6PPQICbKkomWCcV4mCgGluKdReTwN6kHw8GtqKCWYJtP8qWs2IG/Z4HoejZ7XryFchRzWv7EA=
+    secure: CsXDz5RWplU+jFwk4kjhBDV1NPoqJxsghdz0UpUYMen8Eb3foitllh5jdO07Y1zsd2vPCuoMSZ4UbQlpCVhQslj5wgJsXC0xemCLCEWYee7YFP4V6jYGHcb+FkKM7qdX2QJ1IPKVsRDpxRRpVGITHs4kVZy+lCehqjzLKqWw3nBvDmA1PqEpUMpDpbhbZj066NtoEP1H6OYJ0e92WkYlPaf5ik/uOlkfcHM8u1dXUddSlNgTKAwxny+TPTNUcBOKS3UkIO9Cpe53PI3Rktc936uJaQML5j/GqOlFdCIUbhmPsFxi88JSVRlaFeDMKdY2oMBiFP1cf6NAOtYGd87J+qA/TETozGmmrwR1EL8VGqXxOG/8cORLIGAdWjPSspI7Xvx2tYZeuQBABWx3Bo4i3bzKF5ZNQ4le8HFqxvkUsCO9FhQ7sxL5fIBoJR+rfixGyAVHbrFsOsT2FhjXv6pdYQW8oSXWBdGZPMW6bWqqxhsxNCn5BkdbqoUnWe05uEfpMwrl0ePfoTEaWBq0DwlYeq+t6RqjQkMhzaMNLGkPVrn0GveXToPKvdDQNggJhrUHYe/aSp9CsrkYAcQqwJOU6Fx32K4mdugA91aLlEdpXAQ/Q/ppEUte7vyIf2VqVhf6x6XjKRhR+itunoLlhesqJac3AZCHkUhU9goRsMYzUTc=
   app: faisal-ppw
   on:
     repo: faisaladisoe/story-ppw
-
-after_deploy:
-  ./deployment.sh
+after_deploy: "./deployment.sh"

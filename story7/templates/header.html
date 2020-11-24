@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block bootstrap %}
+
+    {% endblock bootstrap %}
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Bitter&family=Courgette&family=Karla&family=Poppins&family=Sacramento&display=swap"
+        rel="stylesheet">
+
+    {% block css %} 
+    
+    {% endblock css %}
+
+    <link rel="shortcut icon" href="{% static 'story1/images/f-thing.svg' %}" type="image/x-icon">
+
+    {% block jquery %}
+
+    {% endblock jquery %}
+
+    {% block title %}
+
+    {% endblock title %}
+</head>
