@@ -41,8 +41,7 @@ body {
       grid-template-columns: 80% auto;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-      grid-template-areas: "title switch"
- "content content";
+      grid-template-areas: "title switch" "content content";
 }
 
 .holder h1 {

@@ -2,9 +2,15 @@
 
 {% include '../header.html' %}
 
-{% block css %} 
+{% block bootstrap %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+{% endblock bootstrap %}
+
+{% block css %}
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
+<link rel="stylesheet" href="{% static 'story7/css/accordion.css' %}">
 {% endblock css %}
 
 {% block jquery %}
@@ -18,16 +24,25 @@
 {% endblock title %}
 
 <body>
-    <div id="accordion">
-        {% for item in data %}
-        <div class="group">
-            <h3>{{ item.title }}</h3>
-            <div>
-                <p>{{ item.topic }}</p>
+    <div class="holder">
+        <div class="container">
+            <div id="accordion">
+                {% for item in data %}
+                <div class="group">
+                    <h3>{{ item.title }}</h3>
+                    <div>
+                        <p>{{ item.topic }}</p>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
-    </div> 
+        <div class="toggle-container">
+            <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+        </div>
+    </div>
+
+    <script src="{% static 'story7/js/theme.js' %}"></script>
 </body>
 
 </html>
