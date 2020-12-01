@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('story1.urls')),
     path('', include('story6.urls')),
     path('', include('story7.urls')),
+    path('', include('story8.urls')),
 ]

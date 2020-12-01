@@ -1,0 +1,103 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8ad7c1;
+}
+
+#title {
+    padding-top: 3rem;
+    color: #a07676;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    margin: auto;
+}
+
+.search-box {
+    margin: 2rem auto;
+    border-radius: 7px;
+    width: 37rem;
+}
+
+#book {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: auto;
+    height: 3rem;
+    border-radius: 2rem;
+}
+
+.imgs {
+    width: 15rem;
+    height: 15rem;
+    margin: auto;
+}
+
+.card {
+    border-radius: 15px;
+    margin: 2rem auto;
+    padding-top: 1rem;
+    width: 17rem;
+    color: #03506f;
+    background-color: #ffe3d8;
+}
+
+.card-body .card-title, .card-text {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+    #title {
+        font-size: 2.3rem;
+    }
+
+    .search-box {
+        width: 33rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #title {
+        font-size: 2rem;
+    }
+    
+    .search-box {
+        width: 30rem;
+    }
+
+    #book {
+        font-size: 1.35rem;
+        height: 3rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #title {
+        font-size: 1.8rem;
+    }
+
+    .search-box {
+        width: 27rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #title {
+        font-size: 1.4rem;
+    }
+
+    .search-box {
+        width: 20rem;
+    }
+    
+    #book {
+        font-size: 1.1rem;
+    }
+}
