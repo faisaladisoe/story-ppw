@@ -67,6 +67,11 @@ body {
   margin-top: 2rem;
 }
 
+.arrow {
+  float: right;
+  margin: 5px;
+}
+
 input[type=checkbox] {
   height: 0;
   width: 0;

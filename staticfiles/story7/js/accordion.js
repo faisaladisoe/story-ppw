@@ -17,4 +17,17 @@ $(function () {
                 ui.item.children("h3").triggerHandler("focusout");
             }
         });
+    $(".button-up").click(function(e) {
+        const currentItem = $(this).parent().parent();
+        currentItem.insertBefore(currentItem.prev())
+        e.preventDefault();
+        e.stopPropagation();
+    });
+
+    $(".button-down").click(function(e) {
+        const currentItem = $(this).parent().parent();
+        currentItem.insertAfter(currentItem.next())
+        e.preventDefault();
+        e.stopPropagation();
+    });
 });
