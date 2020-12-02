@@ -17,8 +17,8 @@ before_script:
 - python manage.py makemigrations
 - python manage.py migrate
 script:
-- python manage.py test story6.tests
-- coverage run --source='story6' manage.py test story6
+- python manage.py test story8.tests
+- coverage run --source='story8' manage.py test story8
 - coverage report -m
 after_success:
 - codecov
