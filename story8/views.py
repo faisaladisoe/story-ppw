@@ -1,21 +1,13 @@
 from django.shortcuts import render
-from django.http import JsonResponse, HttpResponse
-from .forms import BookForm
-import requests
+from django.http import JsonResponse
+import json, requests
 
 # Create your views here.
 def bookCollection(request):
-    data = ''
-    form = BookForm()
-    if request.method == 'POST':
-        form = BookForm(request.POST)
-        if form.is_valid():
-            query = request.POST['bookName']
-            params = 'https://www.googleapis.com/books/v1/volumes?q=' + query
-            data = requests.get(params).json()
-    content = {
-        'form' : form,
-        'data' : data
-    };
-    return render(request, 'bookCollection.html', content)
+    return render (request, 'bookCollection.html')
 
+def jsonResult(request):
+    query = request.GET.get('q', 'Trump') # default value of the dictionary is Trump
+    params = "https://www.googleapis.com/books/v1/volumes?q=" + query
+    data = requests.get(params).json()
+    return JsonResponse(data, safe=False)
