@@ -21,13 +21,11 @@ class Story8TestUnit(TestCase):
         self.assertEqual(response.status_code, HTTPStatus.OK)
 
     def test_bookCollection_functionName(self):
-        path = '/bookCollection/'
-        response = resolve(path)
+        response = resolve(self.bookCollection)
         self.assertEqual(response.func, bookCollection)
     
     def test_jsonResult_functionName(self):
-        path = '/jsonResult/'
-        response = resolve(path)
+        response = resolve(self.jsonResult)
         self.assertEqual(response.func, jsonResult)
 
     def test_jsonResult_returnValue(self):
