@@ -7,3 +7,31 @@
 body {
     background-color: beige;
 }
+
+.card {
+    margin: 2rem auto;
+    border-radius: 1rem;
+    border-color: coral;
+}
+
+.form-register {
+    padding: 2.75% 2% 5%;
+}
+
+.form-title {
+    font-weight: 600;
+    font-size: 36px;
+    color: burlywood;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.button-item {
+    text-decoration: none;
+    color: white;
+}

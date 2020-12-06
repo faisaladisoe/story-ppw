@@ -16,24 +16,77 @@
 {% endblock title %}
 
 <body>
-    <form action="" method="POST" autocomplete="off">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    
-    <div style="text-align: center; margin: 2rem; 0">
-        <button class="btn btn-danger">
-            <a href="{% url 'courseList' %}" style="text-decoration: none; color: white;">
-                Course List
-            </a>
-        </button>
-        <button class="btn btn-dark">
-            <a href="{% url 'index' %}" style="text-decoration: none; color: white;">
-                Back to Home
-            </a>
-        </button>
+    <div class="container">
+        <div class="card form-register">
+            <h2 class="card-title form-title">Register your course here!</h2>
+            <div class="container">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <section class="course-name__section">
+                        <label for="course-name">
+                            Input your course name :
+                        </label>
+                        {{ form.course_name }}
+                    </section>
+                    <br>
+                    <section class="lecturer__section">
+                        <label for="lecturer">
+                            Input the lecturer name :
+                        </label>
+                        {{ form.lecturer }}
+                    </section>
+                    <br>
+                    <section class="credits__section">
+                        <label for="credits">
+                            Input the credit of the course :
+                        </label>
+                        {{ form.credits }}
+                    </section>
+                    <br>
+                    <section class="description__section">
+                        <label for="description">
+                            Input the description about this course :
+                        </label>
+                        {{ form.description }}
+                    </section>
+                    <br>
+                    <section class="term__section">
+                        <label for="term">
+                            Input the term of this course :
+                        </label>
+                        {{ form.term }}
+                    </section>
+                    <br>
+                    <section class="academic-year__section">
+                        <label for="academic-year">
+                            Input the academic year :
+                        </label>
+                        {{ form.academic_year }}
+                    </section>
+                    <br>
+                    <section class="room__section">
+                        <label for="room">
+                            Input the room of this course :
+                        </label>
+                        {{ form.room }}
+                    </section>
+                    <br>
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </form>
+                <div class="button-container">
+                    <a href="{% url 'courseList' %}" class="btn btn-danger button-item">
+                        Course List
+                    </a>
+                    <a href="{% url 'index' %}" class="btn btn-dark button-item">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </body>
 
 {% include '../script.html' %}
