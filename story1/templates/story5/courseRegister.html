@@ -22,16 +22,18 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     
-    <button class="btn btn-danger">
-        <a href="{% url 'courseList' %}" style="text-decoration: none; color: white;">
-            Course List
-        </a>
-    </button>
-    <button class="btn btn-dark">
-        <a href="{% url 'index' %}" style="text-decoration: none; color: white;">
-            Back to Home
-        </a>
-    </button>
+    <div style="text-align: center; margin: 2rem; 0">
+        <button class="btn btn-danger">
+            <a href="{% url 'courseList' %}" style="text-decoration: none; color: white;">
+                Course List
+            </a>
+        </button>
+        <button class="btn btn-dark">
+            <a href="{% url 'index' %}" style="text-decoration: none; color: white;">
+                Back to Home
+            </a>
+        </button>
+    </div>
 </body>
 
 {% include '../script.html' %}
