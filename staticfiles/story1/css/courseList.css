@@ -7,3 +7,11 @@
 body {
     background-color: aquamarine;
 }
+
+.form-title {
+    font-weight: 600;
+    font-size: 36px;
+    color: #999b84;
+    text-align: center;
+    padding-bottom: 2%;
+}
