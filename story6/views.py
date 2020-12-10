@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect
-from .forms import EventForm, VisitorForm
 from .models import Event, Visitor
+from .forms import EventForm, VisitorForm
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url = 'login')
 def events(request):
     data = Event.objects.all()
     content = {
@@ -10,6 +12,7 @@ def events(request):
     }
     return render(request, 'story6/events.html', content)
 
+@login_required(login_url = 'login')
 def eventDetails(request, pk):
     data = Event.objects.all().filter(event = pk)
     if data.exists():
@@ -25,6 +28,7 @@ def eventDetails(request, pk):
 
     return render(request, 'story6/eventDetails.html', content)
 
+@login_required(login_url = 'login')
 def addEvents(request):
     form = EventForm()
     if request.method == 'POST':
@@ -38,6 +42,7 @@ def addEvents(request):
     }
     return render(request, 'story6/addEvents.html', content)
 
+@login_required(login_url = 'login')
 def deleteEvents(request, pk):
     data = Event.objects.get(id = pk)
     if request.method == 'POST':
@@ -49,6 +54,7 @@ def deleteEvents(request, pk):
     }
     return render(request, 'story6/deleteEvents.html', content)
 
+@login_required(login_url = 'login')
 def registerVisitor(request, pk):
     form = VisitorForm()
     data = Event.objects.get(id = pk)
@@ -66,6 +72,7 @@ def registerVisitor(request, pk):
     }
     return render(request, 'story6/registerVisitor.html', content)
 
+@login_required(login_url = 'login')
 def deleteVisitor(request, pk):
     data = Visitor.objects.get(id = pk)
     if request.method == 'POST':
@@ -77,6 +84,7 @@ def deleteVisitor(request, pk):
     }
     return render(request, 'story6/deleteVisitor.html', content)
 
+@login_required(login_url = 'login')
 def updateVisitor(request, pk):
     data = Visitor.objects.get(id = pk)
     form = VisitorForm(instance = data)
@@ -90,3 +98,4 @@ def updateVisitor(request, pk):
         'form' : form
     }
     return render(request, 'story6/updateVisitor.html', content)
+    

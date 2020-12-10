@@ -4,7 +4,7 @@ from django.urls import resolve
 from story8.views import bookCollection, jsonResult
 
 # Create your tests here.
-class Story8TestUnit(TestCase):
+class story8ViewsTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.client = Client()

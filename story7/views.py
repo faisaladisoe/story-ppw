@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url = 'login')
 def accordion(request):
     content = {
         'data': [
@@ -23,3 +25,4 @@ def accordion(request):
         ]
     }
     return render(request, 'story7/accordion.html', content)
+    

@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect
-from .forms import CourseForm
 from .models import Course
+from .forms import CourseForm
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url = 'login')
 def index(request):
     content = {
         'socmed' : [
@@ -31,6 +33,7 @@ def index(request):
 
     return render(request, 'story1/index.html', content)
 
+@login_required(login_url = 'login')
 def copyright(request):
     content = {
         'copyright' : [
@@ -75,18 +78,23 @@ def copyright(request):
 
     return render(request, 'story1/copyright.html', content)
 
+@login_required(login_url = 'login')
 def intro(request):
     return render(request, 'intro/intro.html')
 
+@login_required(login_url = 'login')
 def prototype(request):
     return render(request, 'story2/prototype.html')
 
+@login_required(login_url = 'login')
 def initialDesign(request):
     return render(request, 'story3/initDesign.html')
 
+@login_required(login_url = 'login')
 def copyrightInit(request):
     return render(request, 'story3/copyright-init.html')
 
+@login_required(login_url = 'login')
 def courseRegister(request):
     form = CourseForm()
     if request.method == 'POST':
@@ -101,6 +109,7 @@ def courseRegister(request):
 
     return render(request, 'story5/courseRegister.html', content)
 
+@login_required(login_url = 'login')
 def courseList(request):
     data = Course.objects.all()
     content = {
@@ -109,6 +118,7 @@ def courseList(request):
 
     return render(request, 'story5/courseList.html', content)
 
+@login_required(login_url = 'login')
 def courseDetails(request, course_name):
     data = Course.objects.all().filter(course_name = course_name)
     content = {
@@ -117,6 +127,7 @@ def courseDetails(request, course_name):
 
     return render(request, 'story5/courseDetails.html', content)
 
+@login_required(login_url = 'login')
 def courseUpdate(request, pk):
     data = Course.objects.get(id = pk)
     form = CourseForm(instance = data)
@@ -132,6 +143,7 @@ def courseUpdate(request, pk):
 
     return render(request, 'story5/courseUpdate.html', content)
 
+@login_required(login_url = 'login')
 def courseDelete(request, pk):
     data = Course.objects.get(id = pk)
     if request.method == 'POST':
