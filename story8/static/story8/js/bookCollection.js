@@ -6,7 +6,6 @@ $(document).ready(function() {
             success: data => {
                 $(".row").empty();
                 let array = data.items;
-                console.log(array);
                 for (let i = 0; i < array.length; i++) {
                     let title = array[i].volumeInfo.title || 'title isn\'t available 😢';
                     let subtitle = array[i].volumeInfo.subtitle || 'subtitle doesn\'t exist 😔';
